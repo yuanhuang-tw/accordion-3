@@ -1,0 +1,38 @@
+.accordion-container {
+  width: 80%;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #eee;
+}
+
+button {
+  width: 100%;
+  position: relative;
+  border: none;
+  background-color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+button i {
+  position: absolute;
+  right: .5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: .7s;
+}
+
+button.active i {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.accordion-child {
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+
+button.active + .accordion-child {
+  max-height: 1000px;
+}
